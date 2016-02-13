@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <!-- See comment in main.cljs - it'd be nice not to rely on CLJS compiled to JS, but rather require
+       it as a Lein dependency, or even just copy the namespaces into src/ directory. -->
+  <script src="./repl-web.js"></script>
+  <script src="js/main.js"></script>
+  <style type="text/css">
+    .code {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    input {
+      margin-left: 20px;
+      font-size: 14px;
+      font-family: tahoma, arial, sans-serif;
+      padding: 4px;
+      width: 350px;
+    }
+    body.build-success input{
+      border: 2px solid #33dd33;
+    }
+    body.build-failed input {
+      border: 2px solid #dd3333;
+    }
+  </style>
+</head>
+<body>
+  <div class="code">
+    <input placeholder="Enter ClojureScript code"></input>
+  </div>
+</body>
+</html>
